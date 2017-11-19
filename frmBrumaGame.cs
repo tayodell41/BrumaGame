@@ -41,21 +41,37 @@ namespace BrumaGame
         public int userArmy, usaArmy, ukArmy, germanyArmy, russiaArmy, franceArmy;
         public int userPop, userMoney, userTension;
         public bool userStatus, usaStatus, ukStatus, germanyStatus, russiaStatus, franceStatus;
+
         public frmBrumaGame()
         {
             InitializeComponent();
-            fbg = this;
+            fbg = this; // get refrence to this form to pass to child form
         }
 
         /*------------------------------------------------------------------------------------------
          * Form Handlers
          -----------------------------------------------------------------------------------------*/
+        /*---------------------------------------------
+       * frmBrumaGame_Load()
+       * 
+       * On form load, align everything to make it pretty
+       *  and hide everything that can't be used/doesn't 
+       *  have a value yet
+       --------------------------------------------*/
         private void frmBrumaGame_Load(object sender, EventArgs e)
         {
             alignLabels();
             hideAllTheThings();
         }
 
+        /*---------------------------------------------
+        * frmBrumaGame_SizeChanged()
+        * 
+        * This realigns the labels when the form is resized.
+        *  Will add additional functionality to realign everything
+        *  else in the future if needed, but not sure if I want to
+        *  even let the form be resizeable.
+        --------------------------------------------*/
         private void frmBrumaGame_SizeChanged(object sender, EventArgs e)
         {
             alignLabels();
@@ -64,6 +80,12 @@ namespace BrumaGame
         /*------------------------------------------------------------------------------------------
          * Button Handlers
          -----------------------------------------------------------------------------------------*/
+        /*---------------------------------------------
+       * btnNewGame_Click()
+       * 
+       * Start a new game - get country name, show all values
+       *  and make buttons visible if they're not already
+       --------------------------------------------*/
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             initGame();
@@ -79,6 +101,12 @@ namespace BrumaGame
 
             setLabels();
         }
+
+        /*---------------------------------------------
+        * btnQuit_Click()
+        * 
+        * Gracefully close the program
+        --------------------------------------------*/
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();
@@ -102,6 +130,12 @@ namespace BrumaGame
             lblName.Text = countryName;
         }
 
+        /*---------------------------------------------
+        * startGame()
+        * 
+        * Set initial values for the game. Added some randomization
+        *  of the army sizes, population, and money.
+        --------------------------------------------*/
         private void startGame()
         {
             // set army sizes
@@ -124,7 +158,6 @@ namespace BrumaGame
             germanyStatus = ALIVE;
             russiaStatus = ALIVE;
             franceStatus = ALIVE;
-            // make the labels show all the correct values
         }
 
         /*------------------------------------------------------------------------------------------
@@ -167,6 +200,13 @@ namespace BrumaGame
             lblFranceArmy.Location = new Point(0, ((lblCountryListArmy.Parent.ClientSize.Height / 6) * 5) - (lblFranceArmy.Height / 6));
         }
 
+        /*---------------------------------------------
+        * hideAllTheThings()
+        * 
+        * Set labels to 0 and hide the game buttons because
+        *  if they haven't created their name and initialized 
+        *  the values, they can't start performing game functions
+        --------------------------------------------*/
         private void hideAllTheThings()
         {
             // set the labels to be invisible
@@ -187,6 +227,12 @@ namespace BrumaGame
             btnConscript.Visible = false;
         }
 
+        /*---------------------------------------------
+        * showButtons()
+        * 
+        * Make all the buttons visible once the game 
+        *  has been initialized
+        --------------------------------------------*/
         private void showButtons()
         {
             btnWar.Visible = true;
@@ -195,6 +241,11 @@ namespace BrumaGame
             btnConscript.Visible = true;
         }
 
+        /*---------------------------------------------
+        * setLabels()
+        * 
+        * Refresh the counts on the labels
+        --------------------------------------------*/
         private void setLabels()
         {
             // set user labels

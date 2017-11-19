@@ -29,6 +29,7 @@ namespace BrumaGame
          * Form Initializers
          -----------------------------------------------------------------------------------------*/
         public frmBrumaGame referenceToFbg; // refrence to Parent form
+
         public frmGetUsername(frmBrumaGame fbg)
         {
             InitializeComponent();
