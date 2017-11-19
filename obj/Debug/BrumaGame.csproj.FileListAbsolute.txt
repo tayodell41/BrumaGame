@@ -1,0 +1,11 @@
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\bin\Debug\BrumaGame.exe.config
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\bin\Debug\BrumaGame.exe
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\bin\Debug\BrumaGame.pdb
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\obj\Debug\BrumaGame.csprojResolveAssemblyReference.cache
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\obj\Debug\BrumaGame.frmBrumaGame.resources
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\obj\Debug\BrumaGame.Properties.Resources.resources
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\obj\Debug\BrumaGame.csproj.GenerateResource.Cache
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\obj\Debug\BrumaGame.csproj.CoreCompileInputs.cache
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\obj\Debug\BrumaGame.exe
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\obj\Debug\BrumaGame.pdb
+C:\Users\iHateWindows\source\repos\BrumaGame\BrumaGame\obj\Debug\BrumaGame.frmGetUsername.resources
